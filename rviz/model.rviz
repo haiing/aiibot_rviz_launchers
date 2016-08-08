@@ -75,6 +75,21 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        kinect:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        kinect_shelf:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        kinect_up:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         laser:
           Alpha: 1
           Show Axes: false
@@ -144,11 +159,19 @@ Visualization Manager:
           Value: false
         base_link:
           Value: true
+        kinect:
+          Value: false
+        kinect_shelf:
+          Value: false
+        kinect_up:
+          Value: false
         laser:
-          Value: true
+          Value: false
         left_front_wheel:
           Value: false
         lidar_up:
+          Value: false
+        odom:
           Value: false
         right_front_wheel:
           Value: false
@@ -168,28 +191,29 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
-        base_link:
-          back_wheel_base:
-            back_wheel:
+        odom:
+          base_link:
+            back_wheel_base:
+              back_wheel:
+                {}
+            left_front_wheel:
               {}
-          laser:
-            {}
-          left_front_wheel:
-            {}
-          lidar_up:
-            {}
-          right_front_wheel:
-            {}
-          shelf_left:
-            {}
-          shelf_lidar_front:
-            {}
-          shelf_lidar_top:
-            {}
-          shelf_right:
-            {}
-          shelf_top:
-            {}
+            right_front_wheel:
+              {}
+            shelf_left:
+              {}
+            shelf_right:
+              {}
+            shelf_top:
+              shelf_lidar_front:
+                kinect_shelf:
+                  kinect_up:
+                    kinect:
+                      {}
+                shelf_lidar_top:
+                  lidar_up:
+                    laser:
+                      {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -211,7 +235,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.09370804
+      Distance: 2.66382599
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -223,10 +247,10 @@ Visualization Manager:
         Z: 0
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.144796833
+      Pitch: 0.479796976
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.61355734
+      Yaw: 0.773557484
     Saved: ~
 Window Geometry:
   Displays:
